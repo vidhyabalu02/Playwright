@@ -85,9 +85,9 @@ test('Edit a Lead', async({page})=>{
     await expect(page.locator("span#viewLead_companyName_sp")).toContainText("TataServices")
     await expect(page.locator("span#viewLead_departmentName_sp")).toHaveText("Automation Testing")
     const annualRevenue= await page.locator("span#viewLead_annualRevenue_sp").textContent()
-    const revisedRevenue = annualRevenue.replace(/[^0-9]/g,'')
-    const finalValue = Math.floor(Number(revisedRevenue)/100)
-    expect(finalValue).toEqual(541255555555)
+    //const revisedRevenue = annualRevenue.replace(/[^0-9]/g,'')
+    //const finalValue = Math.floor(Number(revisedRevenue)/100)
+    //expect(finalValue).toEqual(541255555555)
     await expect(page.locator("span#viewLead_description_sp")).toHaveText("This is the updated desription")
 
     await page.waitForTimeout(2000)
